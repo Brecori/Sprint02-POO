@@ -17,11 +17,11 @@ public class Produto {
         this.sku = sku;
     }
 
-    public String getMarca() {
+    public String getMarcaProduto() {
         return marcaProduto;
     }
 
-    public void setMarca(String marca) {
+    public void setMarcaProduto(String marcaProduto) {
         this.marcaProduto = marcaProduto;
     }
 }

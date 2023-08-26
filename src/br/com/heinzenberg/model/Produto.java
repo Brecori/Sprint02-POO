@@ -2,11 +2,11 @@ package br.com.heinzenberg.model;
 
 public class Produto {
     private int sku;
-    private String marcaProduto;
+    private String nome;
 
-    public Produto(int sku, String marcaProduto) {
+    public Produto(int sku, String nome) {
         this.sku = sku;
-        this.marcaProduto = marcaProduto;
+        this.nome = nome;
     }
 
     public int getSku() {
@@ -17,11 +17,11 @@ public class Produto {
         this.sku = sku;
     }
 
-    public String getMarcaProduto() {
-        return marcaProduto;
+    public String getNome() {
+        return nome;
     }
 
-    public void setMarcaProduto(String marcaProduto) {
-        this.marcaProduto = marcaProduto;
+    public void setMarcaProduto(String nome) {
+        this.nome = nome;
     }
 }

@@ -1,80 +1,65 @@
 package br.com.heinzenberg.model;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Mensagem {
-
-    private Tipo_ESG tipoEsg;
-    private String mensagem;
-    private LocalDate data;
-    private Regiao regiao;
-    private String motivo;
-    private Funcionario funcionario;
+    private int id;
+    private String pais;
+    private int qtd;
+    private Date data;
+    private String feedback;
     private Produto produto;
+    private Objetivo objetivo;
 
-    public enum Tipo_ESG {
-        SOCIAL, AMBIENTAL, GOVERNANCA;
+    public Mensagem(int id, String pais, int qtd, Date data, String feedback, Produto produto, Objetivo objetivo) {
+        this.id = id;
+        this.pais = pais;
+        this.qtd = qtd;
+        this.data = data;
+        this.feedback = feedback;
+        this.produto = produto;
+        this.objetivo = objetivo;
     }
 
-    public Tipo_ESG getTipoEsg() {
-        return tipoEsg;
+    public int getId() {
+        return id;
     }
 
-    @Override
-    public String toString() {
-        return "Responsável: " + funcionario.getNome() + "\n" +
-                "Motivo: " + motivo + "\n" +
-                "Tipo Esg: " + tipoEsg + "\n" +
-                "Data: " + data + "\n" +
-                "Regiao: " + regiao.getPais() + "\n" +
-                "Mensagem: " + mensagem + "\n";
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setTipoEsg(Tipo_ESG tipoEsg) {
-        this.tipoEsg = tipoEsg;
+    public String getPais() {
+        return pais;
     }
 
-    public Mensagem() {
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    public String getMensagem() {
-        return mensagem;
+    public int getQtd() {
+        return qtd;
     }
 
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
     }
 
-    public LocalDate getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
-    public Regiao getRegiao() {
-        return regiao;
+    public String getFeedback() {
+        return feedback;
     }
 
-    public void setRegiao(Regiao regiao) {
-        this.regiao = regiao;
-    }
-
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
-
-    public Funcionario getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 
     public Produto getProduto() {
@@ -83,5 +68,13 @@ public class Mensagem {
 
     public void setProduto(Produto produto) {
         this.produto = produto;
+    }
+
+    public Objetivo getObjetivo() {
+        return objetivo;
+    }
+
+    public void setObjetivo(Objetivo objetivo) {
+        this.objetivo = objetivo;
     }
 }

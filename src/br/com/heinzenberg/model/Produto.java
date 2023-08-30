@@ -9,6 +9,10 @@ public class Produto {
         this.nome = nome;
     }
 
+    public Produto(int sku) {
+        this.sku = sku;
+    }
+
     public int getSku() {
         return sku;
     }
@@ -23,5 +27,12 @@ public class Produto {
 
     public void setMarcaProduto(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto: " + sku + "\n" +
+                "Nome: " + nome + '\n';
+
     }
 }

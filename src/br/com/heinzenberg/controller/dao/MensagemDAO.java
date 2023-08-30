@@ -30,7 +30,7 @@ public class MensagemDAO {
             ps.execute();
             ps.close();
         } catch (SQLException e) {
-            System.out.println(e);
+            System.out.println("Erro ao inserir mensagem: " + e);
         }
     }
 }

@@ -17,6 +17,10 @@ public class Objetivo {
         this.descricao = descricao;
     }
 
+    public Objetivo(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -55,5 +59,27 @@ public class Objetivo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @Override
+    public String toString() {
+        return  "Objetivo " + id + "\n" +
+                "Nome: " + nome + "\n" +
+                "Tipo de Esg: " + esgNumberToString(tipoEsg) + "\n" +
+                "Descricao: " + descricao + '\n' +
+                "Meta: " + meta + "\n";
+    }
+
+    public String esgNumberToString(int tipoEsg) {
+        switch (tipoEsg) {
+            case 1:
+                return "Social";
+            case 2:
+                return "Ambiental";
+            case 3:
+                return "Governanca";
+            default:
+                return "ESG invalido";
+        }
     }
 }

@@ -133,9 +133,9 @@ public class Menu {
 
         idObj = parseInt(showInputDialog("Id do Objetivo"));
         nomeObj = showInputDialog("Nome do Objetivo");
-        descricaoObj = showInputDialog("Faça uma descricao do objetivo");
+        descricaoObj = showInputDialog("Faça uma descricao do objetivo \n ex: 'Diminuir em x a producao de co2'");
         tipoEsg = parseInt(showInputDialog("INFORME O TIPO DE ESG QUE O OBJETIVO ABRANGE\n" + "1 - SOCIAL\n" + "2 - AMBIENTAL\n" + "3 - GOVERNANÇA"));
-        metaObj = parseDouble(showInputDialog("Qual a meta do objetivo? (em numeros)"));
+        metaObj = parseDouble(showInputDialog("Qual a meta do objetivo? (valor de x da descricao)"));
         Objetivo objetivo = new Objetivo(idObj, nomeObj, metaObj, tipoEsg, descricaoObj);
         daoObj.inserir(objetivo);
     }
